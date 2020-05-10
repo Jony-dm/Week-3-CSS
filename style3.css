@@ -1,3 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:800|Roboto:400&display=swap');
+
 body {
-    background-color: pink;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   color: #ffffff;
+   line-height: 25px;
+   text-align: left;
+   width: 100%;
+   margin: 0 auto;
+   background: linear-gradient(to bottom right, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.3) 65%, rgba(0,0,0,0.99) 85%), url('https://images.unsplash.com/photo-1529641484336-ef35148bab06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80') no-repeat top/cover;
+   background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong,
+#menuBar li,
+a[onclick] {
+   font-family: 'Montserrat Alternates', sans-serif;
+   font-weight: 800;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.document {
+   width: 100%;
+}
+
+#title {
+   width: 100%;
+   display: inline-block;
+   background-color: #ffffff;
+}
+
+#title h1 {
+   font-size: 35px;
+   margin-top:30px;
+   margin-bottom: 15px;
+}
+
+#title p {
+   margin-bottom: 30px;
+}
+
+#title::after {
+   background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2) 100%), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=30');
+   background-attachment: fixed;
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+   content: "Styled by Jony Murphy";
+   font-family: 'Montserrat Alternates', sans-serif;
+   color: #ffffff;
+   font-weight: 800;
+   font-size: 70px;
+   line-height: 70px;
+   display: block;
+   width: 100%;
+   text-align: center;
+   padding: 100px 0;
+}
+
+.content {
+   overflow: auto;
+}
+
+#title, #menuBar {
+   background: linear-gradient(to bottom right, rgba(192, 27, 212, 1) 20%, rgba(31,200,219,1) 51%, rgba(44, 181, 232, 1) 75%);
+   background-attachment: fixed;
+   background-position: bottom;
+}
+
+#menuBar ul {
+   list-style: none;
+   padding: 0;
+   margin: 30px 0;
+}
+
+#menuBar li {
+   border-right: 1px solid #333333;
+   background: #00000000;
+   color: #ffffff;
+   text-align: center;
+   width: 20%;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-left: -2.782px;
+   cursor: pointer;
+}
+
+#menuBar li:last-child {
+   border-right: 0;
+}
+
+#menuBar li:hover {
+   background: #000000ff;
+}
+
+#text {
+   float: right;
+   width: 80%;
+   display: inline-block;
+   padding-left: 40px;
+}
+
+a[onclick] {
+   background: #c01bd4;
+   color: #ffffff;
+   font-style: italic;
+   text-transform: uppercase;
+   text-align: center;
+   text-decoration: none;
+   padding: 5px 20px;
+   border-radius: 30px;
+   margin: 20px 10px 0px 8px;
+}
+
+a[onclick]:hover {
+   background: #ffa500;
+   color: #000000;
+}
+
+#sidebar {
+   background: linear-gradient(to bottom right, rgba(192, 27, 212, 0.7) 20%, rgba(31, 200, 219, 0.7) 51%, rgba(44, 181, 232, 0.7) 75%);
+   background-color: #000000;
+   background-attachment: fixed;
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 20%;
+   padding: 20px;
+   color: #ffffff;
+}
+
+#text h1:first-child,
+#sidebar h3:first-child {
+   margin-top: 0;
+}
+
+#sidebar p:last-child {
+   margin-bottom: 0;
+}
+
+#menuBar li,
+a[onclick] {
+   transition: background ease-out 0.48s, color ease-in 0.25s;
+}
+
+#menuBar li,
+#text,
+a[onclick],
+#sidebar {
+   display: inline-block;
+}
+
+#title h1,
+#title p,
+.content,
+#bottom {
+   width: 100%;
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#bottom {
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.9) 75%), url('https://images.unsplash.com/photo-1547149600-a6cdf8fce60c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=30');
+   background-color: #000000;
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: #222222;
+   color: #ffffff;
+   padding: 20px;
+   margin-top: 30px;
+}
+
+#bottom::after {
+   content: 'Jony';
+    background: #000;
+    width: 39px;
+    display: inline-block;
+    position: relative;
+    left: -46px;
+    padding-left: 4px;
+}
+
+@media (max-width: 600px) {
+   #menuBar li,
+   #text,
+   #sidebar,
+   #bottom {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      float: none;
+   }
+
+   #title h1, #title p {
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   #title::after {
+      font-size: 335%;
+      padding:50px 0;
+   }
+
+   #bottom {
+      margin-top: 0;
+   }
+
+   #menuBar ul {
+      margin: 0;
+   }
+
+   #menuBar li {
+      padding:10px 0;
+      border-right: 0;
+      border-bottom: 1px solid #000000;
+      margin-left: 0;
+   }
+
+   #menuBar li:last-child {
+      border-bottom: 0;
+   }
 }
